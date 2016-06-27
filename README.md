@@ -61,12 +61,12 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 	show tables;	(shows all tables in the selected database)
 
 ##Files in the Repository
-my.cnf
+* my.cnf
 	Contains configuration information about your MySQL instance
-run.sh
+* run.sh
 	Run script
 	
 ##Resources
-* Download RTView: [www.sl.com]
-* Download Docker Engine: [www.docker.com]
-* Documentation on RTView Historian: [www.sl.com/documentation]
+* Download RTView: www.sl.com
+* Download Docker Engine: www.docker.com
+* Documentation on RTView Historian: www.sl.com/documentation
