@@ -44,11 +44,12 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 * Configure the RTView historian to use the remote MySQL instance. 
 *historian.sl.rtview.historian.driver=com.mysql.jdbc.Driver*
 *historian.sl.rtview.historian.url=jdbc:mysql://192.168.200.35:3306/RTVHISTORY*
-*orian.sl.rtview.historian.username=root*
-*istorian.sl.rtview.historian.password=my-secret-pw*
+*historian.sl.rtview.historian.username=root*
+*historian.sl.rtview.historian.password=my-secret-pw*
 
 * Start the data server and the historian
 * Check the historian logs to see if the data is being written to the remote MySQL database instance. 
+
 ##How to Run a MySQL client application in Docker
 * You can start one or many MySQL client applications in docker. 
 	docker run -it --name=MYSQL-CLIENT  mysql-rtview mysql -u root -h 192.168.200.35 –P 3306 –p
@@ -58,11 +59,13 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 	show databases; (lists all available databases)
 	use RTVHISTORY; (choose the database RTVHISTORY)
 	show tables;	(shows all tables in the selected database)
+
 ##Files in the Repository
 my.cnf
 	Contains configuration information about your MySQL instance
 run.sh
 	Run script
+	
 ##Resources
 * Download RTView: [www.sl.com]
 * Download Docker Engine: [www.docker.com]
