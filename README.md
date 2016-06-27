@@ -8,7 +8,7 @@ Pre-requisites
 - install the Docker Engine (Docker Version 1.11) on the Server (Oracle Linux 7) where you would run the remote MySQL instance. 
 - Ensure to update YUM and have the UEK4 (Unbreakable Enterprise Kernal 4) in the Linux server. 
 - In the Client side, where you would run RTView, install Java version 1.5 and the RTView software. 
-- 
+
 Steps to Install and Run MySQL Database Instance in Docker
 
 Step 1: Start the Docker Engine using the following command. 
