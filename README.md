@@ -13,38 +13,39 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 ##Steps to Install and Run MySQL Database Instance in Docker
 
 ###Step 1: Start the Docker Engine using the following command. 
-	sudo start docker
+	*sudo start docker*
 ###Step 2: Copy the MySQL Docker file and the relevant configuration files to the Linux server.
 	Dockerfile, run.sh, my.cnf
 ###Step 3: Create a new directory in the server /opt/DATA with write permission. 
-	mkdir /opt/DATA
+	*mkdir /opt/DATA*
 ###Step 4: Build Docker image from the files copied over in step #1
-  	docker build -t mysql-rtview .
+  	*docker build -t mysql-rtview .*
 	
-	You would see a message, "Successfully build..." when the image is built without any errors. 
+	You will see a message, "Successfully build..." when the image is built without any errors. 
 ###Step 5: Confirm if the image is indeed built by running: 
-	docker images
+	*docker images*
 	
-	You should see the image created with the name "mysql-rtview"
+	You will see the image created with the name "mysql-rtview"
 ###Step 6: Run the Docker image with the MySQL instance as follows:
-	docker run -d --name=MYSQL -p 3306:3306 -v /opt/DATA/MYSQL:/var/lib/mysql  mysql-rtview
+	*docker run -d --name=MYSQL -p 3306:3306 -v /opt/DATA/MYSQL:/var/lib/mysql  mysql-rtview*
 	
 	name - name of the MySQL instance
 	p - Port number used by the MySQL insance
 	v - Data directory
+	
 	You will see an alpha numeric string printing out if the run command is successful. 
 ###Step 7: Confirm if the MySQL instance started by the above step is running
-	docker ps -a
+	*docker ps -a*
 	
-	You should see your MySQL instance listed as 'mysql-rtview'
+	You will see your MySQL instance listed as 'mysql-rtview'
 ##Using the MySQL Instance for RTView History
 * Ensure to have the JDBC driver for the MySQL database is installed in your client machine and it is available in the RTView class path. 
 * Configure a new SQL database connection to MySQL instance in RTView Builder. You need the correct inputs for the following connection parameters. 
-	Database name
-	User name
-	Password	
-	JDBC URL
-	JDBC driver name
+	* Database name
+	* User name
+	* Password	
+	* JDBC URL
+	* JDBC driver name
 * Create a sample display that connects to the remote MySQL instance on docker using SQL data attachment in Builder. This is to verify if the Builder is able to talk to the remote MySQL instance. 
 * Configure the RTView historian to use the remote MySQL instance. 
 *historian.sl.rtview.historian.driver=com.mysql.jdbc.Driver*
@@ -57,7 +58,7 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 
 ##How to Run a MySQL client application in Docker
 * You can start one or many MySQL client applications in docker. 
-	docker run -it --name=MYSQL-CLIENT  mysql-rtview mysql -u root -h 192.168.200.35 –P 3306 –p
+	*docker run -it --name=MYSQL-CLIENT  mysql-rtview mysql -u root -h 192.168.200.35 –P 3306 –p*
 * After starting the client application you will be asked to enter the password for the MySQL instance in an interactive manner. 
 	Enter password: my-secret-pw
 * You can run the following MySQL commands directly against the MySQL database instance from the console. A few examples below: 
