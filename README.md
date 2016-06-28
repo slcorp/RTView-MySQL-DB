@@ -68,6 +68,6 @@ Contains configuration information about your MySQL instance
 Run script
 	
 ##Resources
-* Download RTView: www.sl.com
-* Download Docker Engine: www.docker.com
-* Documentation on RTView Historian: www.sl.com/documentation
+* Download RTView: http://sl.com/evaluation-request/
+* Download Docker Engine: https://docs.docker.com/engine/installation/
+* Documentation on RTView Historian: http://sldownloads.sl.com/docs/rtview/670/CORE/Historian/Historian.htm
