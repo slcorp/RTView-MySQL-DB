@@ -20,18 +20,22 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 	mkdir /opt/DATA
 ###Step 4: Build Docker image from the files copied over in step #1
   	docker build -t mysql-rtview .
+	
 	You would see a message, "Successfully build..." when the image is built without any errors. 
 ###Step 5: Confirm if the image is indeed built by running: 
 	docker images
+	
 	You should see the image created with the name "mysql-rtview"
 ###Step 6: Run the Docker image with the MySQL instance as follows:
 	docker run -d --name=MYSQL -p 3306:3306 -v /opt/DATA/MYSQL:/var/lib/mysql  mysql-rtview
+	
 	name - name of the MySQL instance
 	p - Port number used by the MySQL insance
 	v - Data directory
 	You will see an alpha numeric string printing out if the run command is successful. 
 ###Step 7: Confirm if the MySQL instance started by the above step is running
 	docker ps -a
+	
 	You should see your MySQL instance listed as 'mysql-rtview'
 ##Using the MySQL Instance for RTView History
 * Ensure to have the JDBC driver for the MySQL database is installed in your client machine and it is available in the RTView class path. 
@@ -57,9 +61,9 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 * After starting the client application you will be asked to enter the password for the MySQL instance in an interactive manner. 
 	Enter password: my-secret-pw
 * You can run the following MySQL commands directly against the MySQL database instance from the console. A few examples below: 
-	show databases; (lists all available databases)
-	use RTVHISTORY; (choose the database RTVHISTORY)
-	show tables;	(shows all tables in the selected database)
+	* show databases; (lists all available databases)
+	* use RTVHISTORY; (choose the database RTVHISTORY)
+	* show tables;	(shows all tables in the selected database)
 
 ##Files in the Repository
 ###my.cnf
