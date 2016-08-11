@@ -58,7 +58,7 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 
 ##How to Run a MySQL client application in Docker
 * You can start one or many MySQL client applications in docker. 
-	*docker run -it --name=MYSQL-CLIENT  mysql-rtview mysql -u root -h 192.168.200.35 –P 3306 –p*
+	*docker run -it --name=MYSQL-CLIENT  mysql-rtview mysql -u root -h 192.0.0.0 –P 3306 –p*
 * After starting the client application you will be asked to enter the password for the MySQL instance in an interactive manner. 
 	Enter password: my-secret-pw
 * You can run the following MySQL commands directly against the MySQL database instance from the console. A few examples below: 
