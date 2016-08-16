@@ -41,7 +41,7 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 ##Using the MySQL Instance for RTView History
 * Ensure to have the JDBC driver for the MySQL database is installed in your client machine and it is available in the RTView class path. 
 
-(Versions of JDBC drivers tested: mysql-connector-java-5.1.39 and mysql-connector-java-5.1.38 to connect to the MySQL instance). 
+   (JDBC driver versions tested: mysql-connector-java-5.1.39 and mysql-connector-java-5.1.38) 
 
 * Configure a new SQL database connection to MySQL instance in RTView Builder. You need the correct inputs for the following connection parameters. 
 	* Database name
