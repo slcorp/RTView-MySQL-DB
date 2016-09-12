@@ -84,5 +84,5 @@ Run script
 * Ensure to update YUM and have the UEK4 (Unbreakable Enterprise Kernal 4) in the Linux server before installing Docker. 
 * RTView Error: Unable to connect to database. 
 You will see the above error when you are not using the correct JDBC driver version for MySQL. We tested the following JDBC drivers: 
-*mysql-connector-java-5.1.39* 
-*mysql-connector-java-5.1.38*
+* mysql-connector-java-5.1.39
+* mysql-connector-java-5.1.38
