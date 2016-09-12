@@ -11,8 +11,8 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 
 ##Steps to Install and Run MySQL Database Instance in Docker
 
-###Step 1: Start the Docker Engine using the following command. 
-*sudo start docker*
+###Step 1: Start the Docker Engine Service using the following command. 
+*sudo service docker start*
 ###Step 2: Copy the MySQL Docker file and the relevant configuration files to the Linux server.
 	Dockerfile, run.sh, my.cnf
 ###Step 3: Create a new directory in the server /opt/DATA with write permission. 
@@ -84,5 +84,4 @@ Run script
 * Ensure to update YUM and have the UEK4 (Unbreakable Enterprise Kernal 4) in the Linux server before installing Docker. 
 * RTView Error: Unable to connect to database. 
 You will see the above error when you are not using the correct JDBC driver version for MySQL. We tested the following JDBC drivers: 
-** mysql-connector-java-5.1.39
-** mysql-connector-java-5.1.38
+(a) mysql-connector-java-5.1.39 and (b)mysql-connector-java-5.1.38
