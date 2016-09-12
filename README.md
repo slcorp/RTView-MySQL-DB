@@ -7,7 +7,6 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 
 ##Pre-requisites
 * Install the Docker Engine (Docker Version 1.11) on the Server (Oracle Linux 7) where you would run the remote MySQL instance. 
-* Ensure to update YUM and have the UEK4 (Unbreakable Enterprise Kernal 4) in the Linux server. 
 * In the Client side, where you would run RTView, install Java version 1.5 and the RTView software. 
 
 ##Steps to Install and Run MySQL Database Instance in Docker
@@ -40,8 +39,6 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 	You will see your MySQL instance listed as 'mysql-rtview'
 ##Using the MySQL Instance for RTView History
 * Ensure to have the JDBC driver for the MySQL database is installed in your client machine and it is available in the RTView class path. 
-
-   (JDBC driver versions tested: mysql-connector-java-5.1.39 and mysql-connector-java-5.1.38) 
 
 * Configure a new SQL database connection to MySQL instance in RTView Builder. You need the correct inputs for the following connection parameters. 
 	* Database name
@@ -81,3 +78,11 @@ Run script
 * Download RTView: http://sl.com/evaluation-request/
 * Download Docker Engine: https://docs.docker.com/engine/installation/
 * Documentation on RTView Historian: http://sldownloads.sl.com/docs/rtview/670/CORE/Historian/Historian.htm
+
+
+##Troubleshooting Tips
+* Ensure to update YUM and have the UEK4 (Unbreakable Enterprise Kernal 4) in the Linux server before installing Docker. 
+* RTView Error: Unable to connect to database. 
+You will see the above error when you are not using the correct JDBC driver version for MySQL. We tested the following JDBC drivers: 
+*mysql-connector-java-5.1.39 
+*mysql-connector-java-5.1.38
