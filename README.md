@@ -1,15 +1,15 @@
 # RTView MySQL Integration in Docker
 
-##Background
+## Background
 RTView-MySQL integration in Docker helps achieve the following goal: 
 * Provide users with a pre-configured MySQL database instance to be used with RTView. 
 * Allows RTView to use the MySQL instance as a data store for historical analysis. 
 
-##Pre-requisites
+## Pre-requisites
 * Install the Docker Engine (Docker Version 1.11) on the Server (Oracle Linux 7) where you would run the remote MySQL instance. 
 * In the Client side, where you would run RTView, install Java version 1.5 and the RTView software. 
 
-##Steps to Install and Run MySQL Database Instance in Docker
+## Steps to Install and Run MySQL Database Instance in Docker
 
 ###Step 1: Start the Docker Engine Service using the following command. 
 *sudo service docker start*
