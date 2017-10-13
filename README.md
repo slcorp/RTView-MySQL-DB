@@ -1,7 +1,6 @@
 # RTView MySQL Integration in Docker
 
-##Background
-RTView-MySQL integration in Docker helps achieve the following goal: 
+##Background RTView-MySQL integration in Docker helps achieve the following goal: 
 * Provide users with a pre-configured MySQL database instance to be used with RTView. 
 * Allows RTView to use the MySQL instance as a data store for historical analysis. 
 
@@ -14,13 +13,13 @@ RTView-MySQL integration in Docker helps achieve the following goal:
 ###Step 1: Start the Docker Engine Service using the following command. 
 *sudo service docker start*
 ###Step 2: Copy the MySQL Docker file and the relevant configuration files to the Linux server.
-	Dockerfile, run.sh, my.cnf
+*Dockerfile, run.sh, my.cnf*
 ###Step 3: Create a new directory in the server /opt/DATA with write permission. 
 *mkdir /opt/DATA*
 ###Step 4: Build Docker image from the files copied over in step #1
 *docker build -t mysql-rtview .*
-	
-	You will see a message, "Successfully build..." when the image is built without any errors. 
+
+	You will see a message, "Successfully build..." when the image is built without any errors.
 ###Step 5: Confirm if the image is indeed built by running: 
 *docker images*
 	
