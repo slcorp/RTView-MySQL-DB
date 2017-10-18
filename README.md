@@ -1,6 +1,7 @@
 # RTView MySQL Integration in Docker
 
-## Background RTView-MySQL integration in Docker helps achieve the following goal: 
+## Background
+RTView-MySQL integration in Docker helps achieve the following goal: 
 * Provide users with a pre-configured MySQL database instance to be used with RTView. 
 * Allows RTView to use the MySQL instance as a data store for historical analysis. 
 
